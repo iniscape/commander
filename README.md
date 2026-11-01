@@ -1,15 +1,35 @@
 # Iniscape Commander
 
-Two-panel file manager for Linux, macOS and Windows, for people who move
-files with the keyboard: two panels side by side, bars above and below,
-every action a key away, in a native-grade look, light and dark.
+A dual-pane file manager for macOS, Windows and Linux, built for speed:
+the window never waits on a slow disk or network, and copies are instant
+clones where the file system allows.
 
-This is a public beta: versions 0.x.y lead up to 1.0.0, which the betas
-update to.
+<img src="screenshot.webp" width="1200" alt="Iniscape Commander in dark mode: a website project in the left panel and an archive folder in the right, with name, extension, size, date and attributes, and the F-key bar along the bottom">
+
+Free, including for commercial use. More info at
+[iniscape.com/commander](https://iniscape.com/commander).
+
+## What it does
+
+- **Copy and keep working.** File operations run in a background queue,
+  unblocking concurrent work.
+- **Viewer for text and images.** Built for speed: a file of any size
+  opens at once.
+- **Find Files and Multi-Rename.** Find by name and content; rename many
+  files at once, with a preview.
+- **Folder tabs and a hotlist.** Each panel keeps its tabs across
+  launches; the hotlist holds favourites.
+- **Two-panel navigation.** Each panel follows its folder, updating
+  itself as files change.
+- **Zip archives open as folders.** Browse, view and copy out; archives
+  are read-only.
+
+Every action has a key, so the mouse is never needed, and the window is
+light or dark, or follows the system.
 
 ## Install
 
-**Linux and macOS**
+**macOS and Linux**
 
     curl -fsSL https://github.com/iniscape/commander/releases/latest/download/install.sh | bash
 
@@ -17,15 +37,18 @@ update to.
 
     powershell -ExecutionPolicy Bypass -c 'irm https://github.com/iniscape/commander/releases/latest/download/install.ps1 -OutFile $env:TEMP\install.ps1; & $env:TEMP\install.ps1'
 
-Requirements: macOS 12 or later on Apple silicon, Linux x86_64 with glibc
-2.28 or later (such as Ubuntu 20.04 or RHEL 8 and newer) or Windows 10 or
-11 x64.
+Requirements: macOS 12+ on Apple silicon, Windows 10+ on x64 or
+Linux (glibc 2.28+) on x86_64.
+
+It installs for the current user, without admin rights: in
+`~/Applications` on macOS, `%LOCALAPPDATA%\Programs` on Windows and
+`~/.local` on Linux.
 
 ## Uninstall
 
 Uninstalling removes the app and its settings, log and caches.
 
-**Linux and macOS**
+**macOS and Linux**
 
     curl -fsSL https://github.com/iniscape/commander/releases/latest/download/uninstall.sh | bash
 
@@ -59,12 +82,12 @@ stays on your computer. The full statement is in the app: About →
 
 Open an issue with the
 [bug report form](https://github.com/iniscape/commander/issues/new/choose).
-It asks for the version (shown in About), your OS and the log, which is
-at:
+It asks for the version (shown in About), your OS and the log: About →
+*Show Log* shows the file, or find it at:
 
 - macOS: `~/Library/Logs/Iniscape/Commander/commander.log`
-- Linux: `~/.local/state/iniscape-commander/commander.log`
 - Windows: `%LOCALAPPDATA%\Iniscape\Commander\commander.log`
+- Linux: `~/.local/state/iniscape-commander/commander.log`
 
 Feature requests are welcome through the same page. They are read and
 noted, then closed, as there is no public backlog. For security issues,
